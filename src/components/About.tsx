@@ -8,21 +8,20 @@ const About = () => {
                     <p className='text-4xl font-bold inline border-b-2 border-gray-500'>About</p>
                 </div>
                 <p className='text-xl mt-20'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quae ipsum natus. 
-                    Temporibus maxime debitis nisi, perspiciatis repudiandae adipisci sit! Corrupti, 
-                    sit deleniti beatae earum praesentium fugit sunt nulla provident cupiditate. Distinctio 
-                    unde nesciunt quia sit magnam harum illo id, dicta dolor laborum eveniet rem saepe 
-                    tempore, assumenda, labore facilis?
+                    I'm a versatile full stack JavaScript developer. 
+                    I have specialized in front-end development, with excellent performance in back-end dev as well.
+                    I have strong skills in frameworks like React and NestJS. I stay up to date with the
+                    latest industry trends and technologies to create high-performance web applications. I have a strong
+                    dedication to learning and developing new solutions.
                 </p>
 
                 <br />
 
                 <p className='text-xl'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quae ipsum natus. 
-                    Temporibus maxime debitis nisi, perspiciatis repudiandae adipisci sit! Corrupti, 
-                    sit deleniti beatae earum praesentium fugit sunt nulla provident cupiditate. Distinctio 
-                    unde nesciunt quia sit magnam harum illo id, dicta dolor laborum eveniet rem saepe 
-                    tempore, assumenda, labore facilis?
+                I've been deep into data science, exploring data analysis, visualization, and machine learning. 
+                Currently, I'm working in my postgraduate with various ML models, diving into Python, TensorFlow, and scikit-learn. 
+                The mix of theory and hands-on work is incredibly exciting. Eager to connect with others passionate 
+                about data science and share experiences!
                 </p>
             </div>
         </div>

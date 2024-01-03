@@ -7,6 +7,8 @@ import ReactImage from '../assets/react.png';
 import Nextjs from '../assets/nextjs.png';
 import Github from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
+import Nodejs from '../assets/nodejs.png';
+import Nestjs from '../assets/nestjs.png';
 
 const Experience = () => {
 
@@ -52,6 +54,18 @@ const Experience = () => {
             title: 'GitHub',
             image: Github,
             style: 'shadow-gray-400'
+        },
+        {
+            id: 8,
+            title: 'NodeJS',
+            image: Nodejs,
+            style: 'shadow-green-400'
+        },
+        {
+            id: 9,
+            title: 'NestJS',
+            image: Nestjs,
+            style: 'shadow-red-400'
         }
     ]
 

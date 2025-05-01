@@ -8,20 +8,19 @@ const About = () => {
                     <p className='text-4xl font-bold inline border-b-2 border-gray-500'>About</p>
                 </div>
                 <p className='text-xl mt-20'>
-                    I'm a versatile full stack JavaScript developer. 
-                    I have specialized in front-end development, with excellent performance in back-end dev as well.
-                    I have strong skills in frameworks like React and NestJS. I stay up to date with the
-                    latest industry trends and technologies to create high-performance web applications. I have a strong
-                    dedication to learning and developing new solutions.
+                    I'm a versatile full-stack JavaScript developer with a strong focus on front-end development 
+                    and solid performance on the back end. I have deep expertise in frameworks like React and NestJS, 
+                    and I'm committed to staying up to date with the latest industry trends to build high-performance web applications. 
+                    I'm passionate about continuous learning and always eager to develop innovative solutions.
                 </p>
 
                 <br />
 
                 <p className='text-xl'>
-                I've been deep into data science, exploring data analysis, visualization, and machine learning. 
-                Currently, I'm working in my postgraduate with various ML models, diving into Python, TensorFlow, and scikit-learn. 
-                The mix of theory and hands-on work is incredibly exciting. Eager to connect with others passionate 
-                about data science and share experiences!
+                    Lately, I’ve been diving into data science—exploring data analysis, visualization, and machine learning. 
+                    In my current postgraduate studies, I work with various ML models using Python, TensorFlow, and scikit-learn. 
+                    The combination of theoretical knowledge and hands-on experience has been incredibly rewarding. 
+                    I’m always open to connecting with fellow data science enthusiasts to exchange insights and experiences!
                 </p>
             </div>
         </div>

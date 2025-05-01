@@ -11,9 +11,9 @@ const Home = () => {
                         I'm a Full Stack Developer
                     </h2>
                     <p className='text-gray-500 py-4 max-w-md'>
-                        I have 4 years of experience developing softwares.
-                        Currently, I work on web application using technologies like
-                        React, Tailwind, Next JS and also with back-end applications like NodeJS and NestJS.
+                        I have 4 years of experience in software development. 
+                        I have been working on web applications using technologies such as React, 
+                        Tailwind CSS, and Next.js, as well as on back-end systems with Node.js and NestJS.
                     </p>
 
                     <div>

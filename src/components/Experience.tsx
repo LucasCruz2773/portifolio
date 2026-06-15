@@ -1,92 +1,66 @@
-import React from 'react'
+import Html from '../assets/html.png'
+import Css from '../assets/css.png'
+import Javascript from '../assets/javascript.png'
+import ReactImage from '../assets/react.png'
+import Nextjs from '../assets/nextjs.png'
+import Github from '../assets/github.png'
+import Tailwind from '../assets/tailwind.png'
+import Nodejs from '../assets/nodejs.png'
+import Nestjs from '../assets/nestjs.png'
+import AnimateOnScroll from './ui/AnimateOnScroll'
+import SectionHeader from './ui/SectionHeader'
 
-import Html from '../assets/html.png';
-import Css from '../assets/css.png';
-import Javascript from '../assets/javascript.png';
-import ReactImage from '../assets/react.png';
-import Nextjs from '../assets/nextjs.png';
-import Github from '../assets/github.png';
-import Tailwind from '../assets/tailwind.png';
-import Nodejs from '../assets/nodejs.png';
-import Nestjs from '../assets/nestjs.png';
+const experiences = [
+  { id: 1, title: 'HTML', image: Html, accent: '#e44d26' },
+  { id: 2, title: 'CSS', image: Css, accent: '#264de4' },
+  { id: 3, title: 'JavaScript', image: Javascript, accent: '#f0db4f' },
+  { id: 4, title: 'React', image: ReactImage, accent: '#61dafb' },
+  { id: 5, title: 'Tailwind', image: Tailwind, accent: '#38bdf8' },
+  { id: 6, title: 'Next.js', image: Nextjs, accent: '#e8e0d0' },
+  { id: 7, title: 'GitHub', image: Github, accent: '#8a9a8c' },
+  { id: 8, title: 'Node.js', image: Nodejs, accent: '#68a063' },
+  { id: 9, title: 'NestJS', image: Nestjs, accent: '#e0234e' },
+]
 
 const Experience = () => {
+  return (
+    <section id="experience" className="site-section bg-surface-elevated/30">
+      <div className="site-container">
+        <SectionHeader
+          label="Skills"
+          title="Technologies I Work With"
+          subtitle="Tools and frameworks I use daily to build modern, performant applications."
+        />
 
-    const experiences = [
-        {
-            id: 1,
-            title: 'HTML',
-            image: Html,
-            style: 'shadow-orange-500'
-        },
-        {
-            id: 2,
-            title: 'CSS',
-            image: Css,
-            style: 'shadow-blue-500'
-        },
-        {
-            id: 3,
-            title: 'JavaScript',
-            image: Javascript,
-            style: 'shadow-yellow-500'
-        },
-        {
-            id: 4,
-            title: 'React',
-            image: ReactImage,
-            style: 'shadow-blue-600'
-        },
-        {
-            id: 5,
-            title: 'Tailwind',
-            image: Tailwind,
-            style: 'shadow-sky-400'
-        },
-        {
-            id: 6,
-            title: 'NextJS',
-            image: Nextjs,
-            style: 'shadow-white'
-        },
-        {
-            id: 7,
-            title: 'GitHub',
-            image: Github,
-            style: 'shadow-gray-400'
-        },
-        {
-            id: 8,
-            title: 'NodeJS',
-            image: Nodejs,
-            style: 'shadow-green-400'
-        },
-        {
-            id: 9,
-            title: 'NestJS',
-            image: Nestjs,
-            style: 'shadow-red-400'
-        }
-    ]
-
-    return (
-        <div id='experience' className='bg-gradient-to-b from-gray-800 to-black w-full md:h-screen'>
-            <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
-                <div>
-                    <p className='text-4xl font-bold border-b-2 border-gray-500 p-2 inline'>Experience</p>
-                    <p className='py-6'>These are the technologies I've worked with</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-5">
+          {experiences.map(({ id, image, title, accent }, index) => (
+            <AnimateOnScroll key={id} delay={index * 60}>
+              <div className="site-tech-tile group">
+                <div
+                  className="w-14 h-14 flex items-center justify-center rounded-xl bg-surface-elevated transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg"
+                  style={{
+                    boxShadow: `0 0 0 1px ${accent}22`,
+                  }}
+                >
+                  <img
+                    src={image}
+                    alt={title}
+                    className="w-10 h-10 object-contain"
+                  />
                 </div>
-                <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
-                    {experiences.map(({id, image, title, style}) => (
-                        <div key={id} className={`shadow hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
-                            <img src={image} alt={title} className='w-20 mx-auto' />
-                            <p className='mt-4'>{title}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+                <p
+                  className="text-sm font-medium transition-colors duration-300 group-hover:text-text-primary"
+                  style={{ color: accent }}
+                >
+                  {title}
+                </p>
+              </div>
+            </AnimateOnScroll>
+          ))}
         </div>
-    )
+      </div>
+    </section>
+  )
 }
 
 export default Experience

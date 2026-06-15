@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +6,105 @@
 
 @layer base {
   html {
-    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-text-primary font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/25 text-text-primary;
+  }
+}
+
+@layer components {
+  .site-section {
+    @apply relative w-full py-24 md:py-32;
+  }
+
+  .site-container {
+    @apply max-w-6xl mx-auto px-5 md:px-8;
+  }
+
+  .site-card {
+    @apply relative rounded-2xl border border-border bg-surface-card/80 backdrop-blur-sm p-6 md:p-7
+      transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5;
+  }
+
+  .site-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold
+      transition-all duration-300 cursor-pointer;
+  }
+
+  .site-btn-primary {
+    @apply site-btn bg-accent text-white hover:bg-accent-light hover:shadow-lg hover:shadow-accent/20
+      hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .site-btn-secondary {
+    @apply site-btn border border-border text-text-secondary hover:border-accent/40
+      hover:text-text-primary hover:bg-surface-elevated;
+  }
+
+  .site-nav-link {
+    @apply relative text-sm font-medium text-text-secondary hover:text-text-primary
+      transition-colors duration-300 cursor-pointer capitalize;
+  }
+
+  .site-nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-0.5 w-0 bg-accent rounded-full transition-all duration-300;
+  }
+
+  .site-nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .site-project-card {
+    @apply site-card overflow-hidden p-0;
+  }
+
+  .site-tech-tile {
+    @apply site-card flex flex-col items-center gap-3 py-6 hover:-translate-y-1;
+  }
+
+  .site-social-link {
+    @apply flex items-center justify-between gap-3 w-40 h-11 px-4 rounded-r-xl
+      border border-border/60 border-l-0 bg-surface-elevated/90 backdrop-blur-md
+      text-text-muted text-xs font-medium uppercase tracking-wide
+      -ml-36 hover:ml-0 hover:text-accent hover:border-accent/30
+      transition-all duration-300;
+  }
+
+  .site-gradient-text {
+    @apply bg-gradient-to-r from-text-primary via-accent-light to-text-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .site-gradient-text-animate {
+    animation: shimmer 4s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

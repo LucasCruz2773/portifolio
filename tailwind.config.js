@@ -25,8 +25,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'monospace'],
+        sans: ['"Sina Nova"', 'system-ui', 'sans-serif'],
+        display: ['"Sina Nova"', 'system-ui', 'sans-serif'],
+        serif: ['"Sina Nova"', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'Cascadia Code', 'Segoe UI Mono', 'monospace'],
       },
       backgroundImage: {
         'grid-pattern':
